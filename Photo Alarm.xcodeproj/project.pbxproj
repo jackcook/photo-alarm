@@ -14,7 +14,6 @@
 		EBBA36FE1A3B3BE4009E8791 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBA36FD1A3B3BE4009E8791 /* Images.xcassets */; };
 		EBBA37011A3B3BE4009E8791 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBA36FF1A3B3BE4009E8791 /* LaunchScreen.xib */; };
 		EBBA370D1A3B3BE4009E8791 /* Photo_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA370C1A3B3BE4009E8791 /* Photo_AlarmTests.swift */; };
-		EBBA37171A3B460F009E8791 /* jackcook.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBA37161A3B460F009E8791 /* jackcook.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		EBBA37061A3B3BE4009E8791 /* Photo AlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo AlarmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBA370B1A3B3BE4009E8791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBBA370C1A3B3BE4009E8791 /* Photo_AlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_AlarmTests.swift; sourceTree = "<group>"; };
-		EBBA37161A3B460F009E8791 /* jackcook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jackcook.png; path = "../../../Dropbox/CosmicByte Logo/jackcook.png"; sourceTree = "<group>"; };
 		EBBA37191A3B4DB1009E8791 /* ObjectiveBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				EBBA37181A3B4DA9009E8791 /* util */,
-				EBBA37161A3B460F009E8791 /* jackcook.png */,
 				EBBA36F61A3B3BE4009E8791 /* AppDelegate.swift */,
 				EBBA36F81A3B3BE4009E8791 /* ViewController.swift */,
 				EBBA36FA1A3B3BE4009E8791 /* Main.storyboard */,
@@ -231,7 +228,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBBA37171A3B460F009E8791 /* jackcook.png in Resources */,
 				EBBA36FC1A3B3BE4009E8791 /* Main.storyboard in Resources */,
 				EBBA37011A3B3BE4009E8791 /* LaunchScreen.xib in Resources */,
 				EBBA36FE1A3B3BE4009E8791 /* Images.xcassets in Resources */,

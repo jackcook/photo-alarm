@@ -8,17 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var picker: UIImagePickerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        picker.sourceType = .Camera
         
-        let imageData = UIImagePNGRepresentation(UIImage(named: "jackcook.png"))
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func uploadToImgur(image: UIImage) {
+        let imageData = UIImagePNGRepresentation(image)
         IMGImageRequest.uploadImageWithData(imageData, title: "Image", success: { (image) -> Void in
             println("\(image.imageID)")
             self.submitImggaRequest(image.imageID)
-        }, progress: nil) { (error) -> Void in
-            println("\(error.localizedDescription)")
+            }, progress: nil) { (error) -> Void in
+                println("\(error.localizedDescription)")
         }
     }
     
@@ -51,5 +64,33 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        var image = info[UIImagePickerControllerOriginalImage] as UIImage
+        uploadToImgur(resizeImage(image))
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func resizeImage(image: UIImage) -> UIImage {
+        let newSize = CGSizeMake(400, 400 / (image.size.width / image.size.height))
+        let imageRef = image.CGImage
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        
+        CGContextSetInterpolationQuality(context, kCGInterpolationHigh)
+        let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: newSize.height)
+        
+        CGContextConcatCTM(context, flipVertical)
+        CGContextDrawImage(context, CGRectMake(0, 0, newSize.width, newSize.height), imageRef)
+        
+        let newImageRef = CGBitmapContextCreateImage(context)
+        let newImage = UIImage(CGImage: newImageRef)
+        
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
 }
