@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBBA36F71A3B3BE4009E8791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA36F61A3B3BE4009E8791 /* AppDelegate.swift */; };
+		EBBA36F91A3B3BE4009E8791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA36F81A3B3BE4009E8791 /* ViewController.swift */; };
+		EBBA36FC1A3B3BE4009E8791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBA36FA1A3B3BE4009E8791 /* Main.storyboard */; };
+		EBBA36FE1A3B3BE4009E8791 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBA36FD1A3B3BE4009E8791 /* Images.xcassets */; };
+		EBBA37011A3B3BE4009E8791 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBA36FF1A3B3BE4009E8791 /* LaunchScreen.xib */; };
+		EBBA370D1A3B3BE4009E8791 /* Photo_AlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA370C1A3B3BE4009E8791 /* Photo_AlarmTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBBA37071A3B3BE4009E8791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBBA36E91A3B3BE4009E8791 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBBA36F01A3B3BE4009E8791;
+			remoteInfo = "Photo Alarm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBBA36F11A3B3BE4009E8791 /* Photo Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBA36F51A3B3BE4009E8791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBBA36F61A3B3BE4009E8791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBBA36F81A3B3BE4009E8791 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBBA36FB1A3B3BE4009E8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBBA36FD1A3B3BE4009E8791 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBBA37001A3B3BE4009E8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EBBA37061A3B3BE4009E8791 /* Photo AlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo AlarmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBA370B1A3B3BE4009E8791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBBA370C1A3B3BE4009E8791 /* Photo_AlarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_AlarmTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBBA36EE1A3B3BE4009E8791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBA37031A3B3BE4009E8791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBBA36E81A3B3BE4009E8791 = {
+			isa = PBXGroup;
+			children = (
+				EBBA36F31A3B3BE4009E8791 /* Photo Alarm */,
+				EBBA37091A3B3BE4009E8791 /* Photo AlarmTests */,
+				EBBA36F21A3B3BE4009E8791 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBBA36F21A3B3BE4009E8791 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBBA36F11A3B3BE4009E8791 /* Photo Alarm.app */,
+				EBBA37061A3B3BE4009E8791 /* Photo AlarmTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBBA36F31A3B3BE4009E8791 /* Photo Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				EBBA36F61A3B3BE4009E8791 /* AppDelegate.swift */,
+				EBBA36F81A3B3BE4009E8791 /* ViewController.swift */,
+				EBBA36FA1A3B3BE4009E8791 /* Main.storyboard */,
+				EBBA36FD1A3B3BE4009E8791 /* Images.xcassets */,
+				EBBA36FF1A3B3BE4009E8791 /* LaunchScreen.xib */,
+				EBBA36F41A3B3BE4009E8791 /* Supporting Files */,
+			);
+			path = "Photo Alarm";
+			sourceTree = "<group>";
+		};
+		EBBA36F41A3B3BE4009E8791 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBBA36F51A3B3BE4009E8791 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBBA37091A3B3BE4009E8791 /* Photo AlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBBA370C1A3B3BE4009E8791 /* Photo_AlarmTests.swift */,
+				EBBA370A1A3B3BE4009E8791 /* Supporting Files */,
+			);
+			path = "Photo AlarmTests";
+			sourceTree = "<group>";
+		};
+		EBBA370A1A3B3BE4009E8791 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBBA370B1A3B3BE4009E8791 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBBA36F01A3B3BE4009E8791 /* Photo Alarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBA37101A3B3BE4009E8791 /* Build configuration list for PBXNativeTarget "Photo Alarm" */;
+			buildPhases = (
+				EBBA36ED1A3B3BE4009E8791 /* Sources */,
+				EBBA36EE1A3B3BE4009E8791 /* Frameworks */,
+				EBBA36EF1A3B3BE4009E8791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Photo Alarm";
+			productName = "Photo Alarm";
+			productReference = EBBA36F11A3B3BE4009E8791 /* Photo Alarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBBA37051A3B3BE4009E8791 /* Photo AlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBA37131A3B3BE4009E8791 /* Build configuration list for PBXNativeTarget "Photo AlarmTests" */;
+			buildPhases = (
+				EBBA37021A3B3BE4009E8791 /* Sources */,
+				EBBA37031A3B3BE4009E8791 /* Frameworks */,
+				EBBA37041A3B3BE4009E8791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBBA37081A3B3BE4009E8791 /* PBXTargetDependency */,
+			);
+			name = "Photo AlarmTests";
+			productName = "Photo AlarmTests";
+			productReference = EBBA37061A3B3BE4009E8791 /* Photo AlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBBA36E91A3B3BE4009E8791 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = CosmicByte;
+				TargetAttributes = {
+					EBBA36F01A3B3BE4009E8791 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EBBA37051A3B3BE4009E8791 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EBBA36F01A3B3BE4009E8791;
+					};
+				};
+			};
+			buildConfigurationList = EBBA36EC1A3B3BE4009E8791 /* Build configuration list for PBXProject "Photo Alarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBBA36E81A3B3BE4009E8791;
+			productRefGroup = EBBA36F21A3B3BE4009E8791 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBBA36F01A3B3BE4009E8791 /* Photo Alarm */,
+				EBBA37051A3B3BE4009E8791 /* Photo AlarmTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBBA36EF1A3B3BE4009E8791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBA36FC1A3B3BE4009E8791 /* Main.storyboard in Resources */,
+				EBBA37011A3B3BE4009E8791 /* LaunchScreen.xib in Resources */,
+				EBBA36FE1A3B3BE4009E8791 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBA37041A3B3BE4009E8791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBBA36ED1A3B3BE4009E8791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBA36F91A3B3BE4009E8791 /* ViewController.swift in Sources */,
+				EBBA36F71A3B3BE4009E8791 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBBA37021A3B3BE4009E8791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBA370D1A3B3BE4009E8791 /* Photo_AlarmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBBA37081A3B3BE4009E8791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBBA36F01A3B3BE4009E8791 /* Photo Alarm */;
+			targetProxy = EBBA37071A3B3BE4009E8791 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBBA36FA1A3B3BE4009E8791 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBA36FB1A3B3BE4009E8791 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBBA36FF1A3B3BE4009E8791 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBA37001A3B3BE4009E8791 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBBA370E1A3B3BE4009E8791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBBA370F1A3B3BE4009E8791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBBA37111A3B3BE4009E8791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Photo Alarm/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBBA37121A3B3BE4009E8791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Photo Alarm/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EBBA37141A3B3BE4009E8791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Photo AlarmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photo Alarm.app/Photo Alarm";
+			};
+			name = Debug;
+		};
+		EBBA37151A3B3BE4009E8791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Photo AlarmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photo Alarm.app/Photo Alarm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBBA36EC1A3B3BE4009E8791 /* Build configuration list for PBXProject "Photo Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBA370E1A3B3BE4009E8791 /* Debug */,
+				EBBA370F1A3B3BE4009E8791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBBA37101A3B3BE4009E8791 /* Build configuration list for PBXNativeTarget "Photo Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBA37111A3B3BE4009E8791 /* Debug */,
+				EBBA37121A3B3BE4009E8791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EBBA37131A3B3BE4009E8791 /* Build configuration list for PBXNativeTarget "Photo AlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBA37141A3B3BE4009E8791 /* Debug */,
+				EBBA37151A3B3BE4009E8791 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBBA36E91A3B3BE4009E8791 /* Project object */;
+}
