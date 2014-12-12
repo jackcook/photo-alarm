@@ -9,13 +9,13 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, IMGSessionDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        //IMGSession.authenticatedSessionWithClientID("a5803e23ca07bea", secret: "f91777a304e09f21d8a839531dcc525a13476388", authType: IMGAuthType.CodeAuth, withDelegate: self)
+        IMGSession.anonymousSessionWithClientID("a5803e23ca07bea", withDelegate: self)
         return true
     }
 
@@ -40,7 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func imgurSessionNeedsExternalWebview(url: NSURL!, completion: (() -> Void)!) {
+        UIApplication.sharedApplication().openURL(url)
+    }
 }
 
