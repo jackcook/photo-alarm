@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6BCA50F92F2DB7E7BB32C85E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C065CBCD9510F92EAA8A447 /* libPods.a */; };
+		EB469B4E1A3BE83300DE8F85 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EB469B4D1A3BE83300DE8F85 /* alarm.mp3 */; };
 		EBBA36F71A3B3BE4009E8791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA36F61A3B3BE4009E8791 /* AppDelegate.swift */; };
 		EBBA36F91A3B3BE4009E8791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA36F81A3B3BE4009E8791 /* ViewController.swift */; };
 		EBBA36FC1A3B3BE4009E8791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBA36FA1A3B3BE4009E8791 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		0C065CBCD9510F92EAA8A447 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		888E40918062C7D489B44FB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AD1DEBFC5660831E5F047B1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EB469B4D1A3BE83300DE8F85 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		EBBA36F11A3B3BE4009E8791 /* Photo Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBA36F51A3B3BE4009E8791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBBA36F61A3B3BE4009E8791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		EBBA36F31A3B3BE4009E8791 /* Photo Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				EB469B4D1A3BE83300DE8F85 /* alarm.mp3 */,
 				EBBA37181A3B4DA9009E8791 /* util */,
 				EBBA36F61A3B3BE4009E8791 /* AppDelegate.swift */,
 				EBBA36F81A3B3BE4009E8791 /* ViewController.swift */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB469B4E1A3BE83300DE8F85 /* alarm.mp3 in Resources */,
 				EBBA36FC1A3B3BE4009E8791 /* Main.storyboard in Resources */,
 				EBBA37011A3B3BE4009E8791 /* LaunchScreen.xib in Resources */,
 				EBBA36FE1A3B3BE4009E8791 /* Images.xcassets in Resources */,

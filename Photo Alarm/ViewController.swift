@@ -6,17 +6,25 @@
 //  Copyright (c) 2014 CosmicByte. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var picker: UIImagePickerController!
     
+    var player: AVAudioPlayer!
+    var soundTimer: NSTimer!
+    
+    var tagsToMatch = [String]()
+    var setImage = true
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    func createImagePicker() {
         picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = false
@@ -25,13 +33,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.presentViewController(picker, animated: true, completion: nil)
     }
     
+    func startAlarm() {
+        playAlarmSound()
+        soundTimer = NSTimer(timeInterval: 5.0, target: self, selector: "playAlarmSound", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(soundTimer, forMode: NSRunLoopCommonModes)
+    }
+    
+    func playAlarmSound() {
+        let soundURL = NSBundle.mainBundle().URLForResource("alarm", withExtension: "mp3")
+        player = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+        player.prepareToPlay()
+        player.play()
+    }
+    
+    func stopAlarm() {
+        player.stop()
+        soundTimer.invalidate()
+    }
+    
     func uploadToImgur(image: UIImage) {
         let imageData = UIImagePNGRepresentation(image)
         IMGImageRequest.uploadImageWithData(imageData, title: "Image", success: { (image) -> Void in
             println("\(image.imageID)")
             self.submitImggaRequest(image.imageID)
-            }, progress: nil) { (error) -> Void in
-                println("\(error.localizedDescription)")
+        }, progress: nil) { (error) -> Void in
+            println("\(error.localizedDescription)")
         }
     }
     
@@ -51,14 +77,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if let results = responseData["results"] as? NSArray {
                 if let resultsDict = results[0] as? NSDictionary {
                     if let tags = resultsDict["tags"] as? NSArray {
+                        var newTags = [String]()
                         for tag in tags {
                             if let tagDict = tag as? NSDictionary {
                                 if let confidence = tagDict["confidence"] as? Float {
                                     if let tag = tagDict["tag"] as? String {
-                                        println("\(tag): \(confidence)")
+                                        if setImage {
+                                            tagsToMatch.append(tag)
+                                        } else {
+                                            newTags.append(tag)
+                                        }
                                     }
                                 }
                             }
+                        }
+                        
+                        if !setImage {
+                            checkTags(newTags)
+                        } else {
+                            println("done")
                         }
                     }
                 }
@@ -66,11 +103,37 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    func checkTags(newTags: [String]) {
+        var matches = 0
+        for tag in newTags {
+            if contains(tagsToMatch, tag) {
+                matches += 1
+            }
+        }
+        
+        if matches > 10 {
+            stopAlarm()
+        }
+        
+        println("done: \(matches)")
+    }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         var image = info[UIImagePickerControllerOriginalImage] as UIImage
         uploadToImgur(resizeImage(image))
         
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func setImage(sender: AnyObject) {
+        setImage = true
+        createImagePicker()
+    }
+    
+    @IBAction func demonstrate(sender: AnyObject) {
+        setImage = false
+        createImagePicker()
+        startAlarm()
     }
     
     func resizeImage(image: UIImage) -> UIImage {
