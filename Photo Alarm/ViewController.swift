@@ -62,10 +62,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func submitImggaRequest(imageID: String) {
-        let url = NSURL(string: "http://api.imagga.com/v1/tagging?url=http://i.imgur.com/\(imageID).png")!
+        let url = NSURL(string: "https://api.clarifai.com/v1/tag?url=http://i.imgur.com/\(imageID).png")!
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
-        request.addValue("Basic YWNjXzJlNTZmOTk0YjI0N2M1ZDphYTY0YjM5YzMyNTFlNjA4Njc2ODkyMmFhNjk3MDExYw==", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer jhGepBFqvp22ru1vQtvo0d4yVrWPEZ", forHTTPHeaderField: "Authorization")
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
             self.parseTags(data)
@@ -76,26 +76,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let responseData = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? NSDictionary {
             if let results = responseData["results"] as? NSArray {
                 if let resultsDict = results[0] as? NSDictionary {
-                    if let tags = resultsDict["tags"] as? NSArray {
-                        var newTags = [String]()
-                        for tag in tags {
-                            if let tagDict = tag as? NSDictionary {
-                                if let confidence = tagDict["confidence"] as? Float {
-                                    if let tag = tagDict["tag"] as? String {
-                                        if setImage {
-                                            tagsToMatch.append(tag)
-                                        } else {
-                                            newTags.append(tag)
-                                        }
+                    if let resultArray = resultsDict["result"] as? NSDictionary {
+                        if let tagArray = resultArray["tag"] as? NSDictionary {
+                            if let tags = tagArray["classes"] as? [String] {
+                                var newTags = [String]()
+                                for tag in tags {
+                                    if setImage {
+                                        tagsToMatch.append(tag)
+                                    } else {
+                                        newTags.append(tag)
                                     }
                                 }
+                                
+                                if !setImage {
+                                    checkTags(newTags)
+                                } else {
+                                    println("done")
+                                }
                             }
-                        }
-                        
-                        if !setImage {
-                            checkTags(newTags)
-                        } else {
-                            println("done")
                         }
                     }
                 }
@@ -111,7 +109,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
         
-        if matches > 10 {
+        if matches > 12 {
             stopAlarm()
         }
         
@@ -137,7 +135,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func resizeImage(image: UIImage) -> UIImage {
-        let newSize = CGSizeMake(400, 400 / (image.size.width / image.size.height))
+        let newSize = CGSizeMake(200, 200 / (image.size.width / image.size.height))
         let imageRef = image.CGImage
         
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
